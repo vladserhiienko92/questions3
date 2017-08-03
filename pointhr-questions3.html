@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PointHR Quality Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Content/css/remodal.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/remodal-default-theme.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/ion.rangeSlider.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/pointhr.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:300,400,500,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/cece73aa03.js"></script>
+</head>
+
+<body>
+
+<div class="page-wrap pointhr-wrap">
+    <header id="header" class="pointhr-header">
+        <div class="site-topbar">
+            <div class="container">
+                <div class="top-left">
+                    <div class="userpic"><a href="#"><img src="Content/images/user-photo.jpg" alt=""></a></div>
+                    <div><a href="#" class="username">James Castor</a></div>
+                    <div class="useremail">employee-23@pointhr.com</div>
+                </div>
+                <div class="top-right">
+                    <div class="account-sett"><a href="#">Account &amp; Settings</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main-bar">
+                <a href="#" class="logo"><img src="Content/images/logo-current.png" alt=""/></a>
+                <nav>
+                    <ul>
+                        <li class=""><a href="#">Dashboard</a></li>
+                        <li><a href="#">Candidates</a></li>
+                        <li><a href="#">Employees</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Career Portal</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="i9-top-bar">
+        <div class="container">
+            <h1 class="title">Audit questions</h1>
+        </div>
+    </div>
+
+    <div id="body">
+        <div class="qc-client-info">
+            <div class="container qc-client-container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 client-info1">
+                        <p class="client-company">Client, Company name</p>
+                        <p class="client-name">Employee Last Name: <span>Lastname</span></p>
+                        <label for="form-used" class="client-label padding-left">Enter form used</label>
+                        <select id="form-used" class="qc-select">
+                            <option value="Choose client">Choose form used</option>
+                            <option value="Choose client1">Choose client</option>
+                            <option value="Choose client2">Choose client</option>
+                            <option value="Choose client3">Choose client</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-4 colr-xs-12 client-info1">
+                        <p class="client-name">Employee First name: <span>Firstname</span></p>
+                        <p class="client-name">Employee Middle Name: <span>Middlename</span></p>
+                        <p class="client-label">Documents used</p>
+                        <div class="audit-option qc-option">
+                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                            <label for="option1">Yes</label>
+                        </div>
+                        <div class="audit-option qc-option">
+                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                            <label for="option1">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 client-info1">
+                        <p class="client-name">DOB: <span>02/06/1980</span></p>
+                        <p class="client-name">SSN: <span>123-45-6789</span></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="qc-client-info">
+            <div class="container qc-client-container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 sidebar">
+                        <div class="section-img">
+                            <img src="Content/images/captures/capture4.jpg" alt="capture4">
+                        </div>
+                        <div class="section-img">
+                            <img src="Content/images/captures/capture5.jpg" alt="capture5">
+                        </div>
+                        <div class="section-img">
+                            <img src="Content/images/captures/capture6.jpg" alt="capture6">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 qc-questions">
+                        <div class="section-qc">
+                            <h4>Section 1</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Name</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">DOB</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Address</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">SSN</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Citizenship</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="form-used" class="client-label padding-left">Enter option</label>
+                                    <select id="form-used" class="qc-select">
+                                        <option value="Choose client">Choose option</option>
+                                        <option value="Choose client1">Choose option</option>
+                                        <option value="Choose client2">Choose option</option>
+                                        <option value="Choose client3">Choose option</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">1. Registrtion #</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">2. Admission #</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">3. Foreign passport # (AND)</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">4. Country of residence</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Signed</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Date</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="form-used" class="client-label padding-left">Date</label>
+                                    <select id="form-used" class="qc-select">
+                                        <option value="Choose client">Enter Date</option>
+                                        <option value="Choose client1">Enter Daten</option>
+                                        <option value="Choose client2">Enter Date</option>
+                                        <option value="Choose client3">Enter Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Translator used</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Signed</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Date</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="form-used" class="client-label padding-left">Date</label>
+                                    <select id="form-used" class="qc-select">
+                                        <option value="Choose client">Enter Date</option>
+                                        <option value="Choose client1">Enter Daten</option>
+                                        <option value="Choose client2">Enter Date</option>
+                                        <option value="Choose client3">Enter Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Name</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Address</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <h4>Section 2</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Name</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Citizenship</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4>List A</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Issuing authority</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Number</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Expiration</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Issuing authority</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Number</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Expiration</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Issuing authority</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Number</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Expiration</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4>List B</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Issuing authority</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Number</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Expiration</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <h4>List C</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Issuing authority</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Number</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Expiration</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="client-label">Certification</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">First day of work</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="form-used" class="client-label padding-left">Date</label>
+                                    <select id="form-used" class="qc-select">
+                                        <option value="Choose client">Enter Date</option>
+                                        <option value="Choose client1">Enter Date</option>
+                                        <option value="Choose client2">Enter Date</option>
+                                        <option value="Choose client3">Enter Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Employers representative name</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Business street address</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Business name</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Employers signature</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="form-used" class="client-label padding-left">Date</label>
+                                    <select id="form-used" class="qc-select">
+                                        <option value="Choose client">Enter Date</option>
+                                        <option value="Choose client1">Enter Date</option>
+                                        <option value="Choose client2">Enter Date</option>
+                                        <option value="Choose client3">Enter Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="section-qc">
+                            <h4>Section 3</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Section 3</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Date of Rehire if applicable</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Name if applicable</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Number</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Title</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Signature</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="client-label">Expiration</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="client-label">Print name</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="client-label">Date</p>
+                                    <form action="#">
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">Yes</label>
+                                        </div>
+                                        <div class="audit-option qc-option">
+                                            <input ng-click="radio = 1" id="option1" type="radio" name="group" value="option1">
+                                            <label for="option1">No</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="buttons button-save">
+                    <input type="submit" class="form-button i9-submit-btn" value="Save">
+                </div>   
+            </div> 
+        </div>
+    </div>
+</div>
+
+<footer id="pointhr-footer" class="pointhr-footer_no">
+    <div class="container">
+        <div class="row footer-upper">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-block">
+                <h2>Contact Info</h2>
+                <ul class="address">
+                    <li> <i class="fa fa-map-marker"></i> Address : 3535 Firewheel Dr</li>
+                    <li> <i class="fa nav-tabs"></i> Flower Mound, TX 75028</li>
+                    <li><i class="fa fa-mobile"></i> Telephones : +1-866-661-1500</li>
+                    <li><i class="fa fa-envelope-o"></i> E-mail : admin@pointhr.com </li>
+                </ul>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 footer-block">
+                <h2>Recent Posts</h2>
+                <div class="post-box">
+                    <div class="blogfeed" id="dvblogfeed">
+                        <ul class="feedEkList">
+                            <li>
+                                <div class="itemTitle">
+                                    <a href="https://pointhr.com/blog/ArtMID/3847/ArticleID/11/Remote-Hire-i9-Complete-I-9-forms-anywhere" target="_blank">Remote Hire i9 - Complete I-9 forms anywhere</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itemTitle">
+                                    <a href="https://pointhr.com/blog/ArtMID/3847/ArticleID/10/PointHR-is-going-Pink-for-breast-cancer-" target="_blank">PointHR is going Pink for breast cancer,</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itemTitle">
+                                    <a href="https://pointhr.com/blog/ArtMID/3847/ArticleID/9/Infographic-Benefits-of-a-Drug-%e2%80%93-Free-Workplace" target="_blank">Infographic: Benefits of a Drug – Free Workplace</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-block">
+                <h2>Follow Us</h2>
+                <div class="social">
+                    <a href="https://twitter.com/pointhr"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/PointHRInc"><i class="fa fa-facebook"></i></a>
+                    <a href="https://pointhr.com/DesktopModules/News/API/News.rss?TabId=394&amp;ModuleId=3851"><i class="fa fa-rss"></i></a>
+                    <a href="https://www.linkedin.com/company/pointhr"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">© Copyright 2014 PointHR Incorporated - <a href="https://pointhr.com/Terms">Terms</a> &amp; <a href="https://pointhr.com/Privacy">Privacy</a></div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/js/select2.min.js"></script>
+<script src="Scripts/remodal.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/rating.js"></script>
+<script src="Scripts/ion.rangeSlider.min.js"></script>
+<script src="Scripts/jquery.colorbox-min.js"></script>
+<script src="Scripts/jquery.nicescroll.min.js"></script>
+<script src="Scripts/main.js"></script>
+<script src="https://use.fontawesome.com/cece73aa03.js"></script>
+
+</body>
+</html>
